@@ -3,9 +3,21 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+// A notation @Table é usada pois 'User' é uma palavra reservada do DB H2 e é necessário renomear
+// para não dar conflito com a palavra 'User' do DB
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
