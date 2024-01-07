@@ -9,8 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-// A notation @Table é usada pois 'User' é uma palavra reservada do DB H2 e é necessário renomear
-// para não dar conflito com a palavra 'User' do DB
+// the notation @Table is used because 'User' is a reserved word in the H2 database, and it is necessary to rename
+// it to avoid conflicts with the word 'User' in the database.
 @Entity
 @Table(name = "tb_user")
 public class User implements Serializable{
