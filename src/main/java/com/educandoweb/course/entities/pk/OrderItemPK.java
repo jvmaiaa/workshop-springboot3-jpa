@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import com.educandoweb.course.entities.Order;
 import com.educandoweb.course.entities.Product;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
